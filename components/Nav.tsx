@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Nav() {
   return (
-    <header className="navbar dark:text-white bg-base-100 shadow-sm">
+    <header className="sticky z-10 top-0 navbar bg-base-100 shadow-sm">
       <div className="flex-1">
         <Link href={"/"} className="text-xl flex items-center">
           <Image
@@ -34,6 +35,7 @@ export default function Nav() {
               </ul>
             </details>
           </li>
+          <ModeToggle />
         </ul>
       </div>
     </header>
