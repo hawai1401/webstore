@@ -1,81 +1,76 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { RiMessengerLine } from "react-icons/ri";
 
 export default function Footer() {
   return (
-    <footer className="grid grid-cols-4 gap-4 bg-slate-200 p-5 relative z-50 shadow-md">
-      <div className="flex flex-col items-center gap-3">
-        <div className="text-xl mb-2">
-          Web<span className="text-blue-500">Store</span>
-        </div>
-        <p className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a
-          sapiente tenetur suscipit, expedita est cum maxime temporibus!
+    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+      <aside>
+        <Image src={"/logo.png"} alt="logo" width={50} height={50} />
+        <p>
+          WebStore
+          <br />
+          Expert dans le domaine depuis 2015.
         </p>
-      </div>
-      <div className="flex flex-col items-center gap-3">
-        <div className="text-xl mb-2 text-blue-500">Légal</div>
-        <ul className="flex flex-col items-center">
-          <li className="hover:underline">
-            <Link href="">CGU</Link>
+      </aside>
+      <nav>
+        <h6 className="footer-title">Légal</h6>
+        <Link href={"/legal/cgu"} className="link link-hover">
+          CGU
+        </Link>
+        <Link href={"/legal/cgv"} className="link link-hover">
+          CGV
+        </Link>
+        <Link href={"/legal/mentions-legales"} className="link link-hover">
+          Mentions Légales
+        </Link>
+      </nav>
+      <nav>
+        <h6 className="footer-title">Services</h6>
+        <Link href={"/services/web"} className="link link-hover">
+          Web
+        </Link>
+        <Link href={"/services/graphisme"} className="link link-hover">
+          Graphisme
+        </Link>
+      </nav>
+
+      <nav>
+        <h6 className="footer-title">Contact</h6>
+        <ul className="flex items-center justify-center gap-2 mb-1">
+          <li>
+            <Link href="https://wa.me/+33909090909">
+              <FaWhatsapp
+                size={20}
+                className="hover:fill-green-500 transition-all ease-in-out"
+              />
+            </Link>
           </li>
-          <li className="hover:underline">
-            <Link href="">CGV</Link>
+          <li>
+            <Link href="htttps://instagram.com/webstore">
+              <FaInstagram
+                size={20}
+                className="hover:fill-pink-400 transition-all ease-in-out"
+              />
+            </Link>
           </li>
-          <li className="hover:underline">
-            <Link href="">Mentions Légales</Link>
-          </li>
-        </ul>
-      </div>
-      <div className="flex flex-col items-center gap-3">
-        <div className="text-xl mb-2 text-blue-500">Services</div>
-        <ul className="flex flex-col items-center">
-          <li className="hover:underline">
-            <Link href="">Web</Link>
-          </li>
-          <li className="hover:underline">
-            <Link href="">Graphisme</Link>
-          </li>
-        </ul>
-      </div>
-      <div className="flex flex-col items-center gap-3">
-        <div className="text-xl mb-2 text-blue-500">Contact</div>
-        <ul className="flex flex-col items-center">
-          <ul className="flex items-center justify-center gap-2 mb-4">
-            <li>
-              <Link href="https://wa.me/+33909090909">
-                <FaWhatsapp
-                  size={20}
-                  className="hover:fill-green-500 transition-all ease-in-out"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="htttps://instagram.com/webstore">
-                <FaInstagram
-                  size={20}
-                  className="hover:fill-pink-400 transition-all ease-in-out"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://m.me/webstore">
-                <RiMessengerLine
-                  size={22}
-                  className="hover:fill-blue-500 transition-all ease-in-out"
-                />
-              </Link>
-            </li>
-          </ul>
-          <li className="hover:underline">
-            <Link href="tel:+33909090909">+33 9 09 09 09 09</Link>
-          </li>
-          <li className="hover:underline">
-            <Link href="mailto:contact@webstore.fr">contact@webstore.fr</Link>
+          <li>
+            <Link href="https://m.me/webstore">
+              <RiMessengerLine
+                size={22}
+                className="hover:fill-blue-500 transition-all ease-in-out"
+              />
+            </Link>
           </li>
         </ul>
-      </div>
+        <Link href="tel:+33909090909" className="link link-hover">
+          +33 9 09 09 09 09
+        </Link>
+        <Link href="mailto:contact@webstore.fr" className="link link-hover">
+          contact@webstore.fr
+        </Link>
+      </nav>
     </footer>
   );
 }
