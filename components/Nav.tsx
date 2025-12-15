@@ -20,17 +20,23 @@ export default function Nav() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href={"/"}>Accueil</Link>
+            <Link className="rounded-xl" href={"/"}>
+              Accueil
+            </Link>
           </li>
           <li>
-            <details>
-              <summary>Services</summary>
+            <details className="rounded-xl">
+              <summary className="rounded-xl">Services</summary>
               <ul className="bg-base-100 rounded-t-none p-2">
                 <li>
-                  <Link href={"/services/web"}>Web</Link>
+                  <Link className="rounded-xl" href={"/services/web"}>
+                    Web
+                  </Link>
                 </li>
                 <li>
-                  <Link href={"/services/graphisme"}>Grapisme</Link>
+                  <Link className="rounded-xl" href={"/services/graphisme"}>
+                    Graphisme
+                  </Link>
                 </li>
               </ul>
             </details>
