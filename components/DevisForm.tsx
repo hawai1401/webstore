@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -11,11 +13,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 
-export default function DevisForm() {
-  const queries = useSearchParams();
+export default function DevisForm({
+  service,
+}: {
+  service?: undefined | string;
+}) {
   return (
     <form
       onSubmit={(e) => {
@@ -31,7 +35,7 @@ export default function DevisForm() {
         </div>
         <div className="grid gap-2">
           <Label htmlFor="email">Type de service</Label>
-          <Select defaultValue={queries.get("service") ?? "logo"} required>
+          <Select defaultValue={service} required>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Choisissez un service" />
             </SelectTrigger>
