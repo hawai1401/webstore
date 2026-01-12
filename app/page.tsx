@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Hyperspeed from "@/components/Hyperspeed";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,39 +40,45 @@ export default function Home() {
           Nos services <span className="text-blue-400">web</span>
         </div>
         <div className="flex p-5 justify-between gap-5">
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Site vitrine</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Site e-commerce</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Application web</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
         </div>
         <Button
           variant={"secondary"}
-          className="rounded-full bg-blue-400 hover:bg-blue-500 hover:scale-105 transition-all ease-in-out text-white"
+          className="rounded-full bg-blue-400 hover:bg-blue-500 hover:scale-105 transition-all ease-in-out text-white cursort-pointer"
         >
-          Demander un devis
+          <Link href={"/services/web"}>Plus d&apos;informations</Link>
         </Button>
       </section>
       <section
@@ -82,30 +89,36 @@ export default function Home() {
           Nos services <span className="text-blue-400">graphiques</span>
         </div>
         <div className="flex items-stretch p-5 justify-between gap-5">
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Logo</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Charte graphique</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:scale-105 transition duration-300">
             <CardHeader>
               <CardTitle>Affiche publicitaire</CardTitle>
               <CardDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, quas?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tenetur saepe voluptatibus totam deserunt accusamus officiis.
+                Nisi modi, iusto porro, doloribus impedit eveniet omnis aliquam
+                animi et consectetur possimus. Modi, nemo.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -114,15 +127,15 @@ export default function Home() {
           variant={"secondary"}
           className="rounded-full bg-blue-400 hover:bg-blue-500 hover:scale-105 transition-all ease-in-out text-white"
         >
-          Demander un devis
+          <Link href={"/services/graphisme"}>Plus d&apos;informations</Link>
         </Button>
       </section>
       <section
         id="avis"
         className="flex flex-col items-center justify-center gap-4 py-10 bg-base-300"
       >
-        <div className="text-3xl font-bold flex justify-center ">
-          Ce que nos clients en pense :
+        <div className="text-3xl font-bold flex justify-center gap-2">
+          Ce que nos clients en <span className="text-blue-400">pense</span>
         </div>
         <div className="flex items-stretch p-5 justify-between gap-5">
           <Avi />

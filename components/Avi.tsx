@@ -3,7 +3,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 export default function Avi() {
   return (
-    <Card>
+    <Card className="hover:scale-105 transition duration-300">
       <CardHeader>
         <div className="flex gap-1">
           <FaStar className="fill-yellow-200 stroke-black stroke-10" />
