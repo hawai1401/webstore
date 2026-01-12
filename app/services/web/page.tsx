@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WebServices() {
   return (
@@ -12,7 +13,7 @@ export default function WebServices() {
         id="Logo"
         className="flex flex-wrap items-stretch p-5 justify-between gap-5"
       >
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/web/vitrine.png"
@@ -38,13 +39,11 @@ export default function WebServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
-              </button>
+              <Link href={"/devis?service=siteVitrine"}>Demander un devis</Link>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/web/e-commerce.png"
@@ -65,13 +64,15 @@ export default function WebServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=siteCommerce"}>
+                  Demander un devis
+                </Link>
               </button>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/web/blog.png"
@@ -92,8 +93,8 @@ export default function WebServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=blog"}>Demander un devis</Link>
               </button>
             </div>
           </div>

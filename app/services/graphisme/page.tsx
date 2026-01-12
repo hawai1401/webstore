@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GraphismeServices() {
   return (
@@ -10,9 +11,9 @@ export default function GraphismeServices() {
       </section>
       <section
         id="Logo"
-        className="flex flex-wrap items-stretch p-5 justify-between gap-5"
+        className="flex flex-wrap items-stretch p-5 justify-between gap-10"
       >
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/graphisme/entreprise.png"
@@ -38,13 +39,13 @@ export default function GraphismeServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=logo"}>Demander un devis</Link>
               </button>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/graphisme/charte-graphique.png"
@@ -67,13 +68,13 @@ export default function GraphismeServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=charte"}>Demander un devis</Link>
               </button>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100">
+        <div className="card bg-base-100 w-96 shadow-sm flex-1 min-w-100 hover:scale-105 transition duration-300">
           <figure className="px-10 pt-10">
             <Image
               src="/services/graphisme/affiche.png"
@@ -94,8 +95,8 @@ export default function GraphismeServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <button className="btn btn-primary rounded-xl">
-                Demander un devis
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=affiche"}>Demander un devis</Link>
               </button>
             </div>
           </div>
