@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DaisySync } from "@/components/DaisySync";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,13 @@ export default function RootLayout({
           <Nav />
           {children}
           <Footer />
+          <Toaster
+            position="top-center"
+            visibleToasts={3}
+            toastOptions={{
+              className: "!leading-normal !overflow-hidden !flex !items-center",
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

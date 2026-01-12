@@ -41,6 +41,11 @@ export default function Nav() {
               </ul>
             </details>
           </li>
+          <li>
+            <Link className="rounded-xl" href={"/devis"}>
+              Devis
+            </Link>
+          </li>
           <ModeToggle />
         </ul>
       </div>
