@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Loader2, Send, User, Mail, MessageSquare } from "lucide-react";
@@ -17,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
-export default function ContactForm() {
+export function ContactForm() {
   const searchParams = useSearchParams();
   const selectedPack = searchParams.get("pack") || "Général";
   const [isPending, setIsPending] = useState(false);
@@ -114,4 +114,10 @@ export default function ContactForm() {
       </Card>
     </div>
   );
+}
+
+export default function Page() {
+  <Suspense fallback={"Chargement"}>
+    <ContactForm />;
+  </Suspense>;
 }
