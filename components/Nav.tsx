@@ -4,7 +4,7 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Nav() {
   return (
-    <header className="sticky z-10 top-0 navbar bg-base-100 shadow-sm">
+    <header className="sticky z-100 top-0 navbar bg-base-100 shadow-sm">
       <div className="flex-1">
         <Link href={"/"} className="text-xl flex items-center">
           <Image
@@ -24,6 +24,24 @@ export default function Nav() {
               Accueil
             </Link>
           </li>
+
+          <li>
+            <details className="rounded-xl">
+              <summary className="rounded-xl">Informations</summary>
+              <ul className="bg-base-100 rounded-t-none p-2">
+                <li>
+                  <Link className="rounded-xl" href={"/process"}>
+                    Processus
+                  </Link>
+                </li>
+                <li>
+                  <Link className="rounded-xl" href={"/projects"}>
+                    Réalisations
+                  </Link>
+                </li>
+              </ul>
+            </details>
+          </li>
           <li>
             <details className="rounded-xl">
               <summary className="rounded-xl">Services</summary>
@@ -38,12 +56,22 @@ export default function Nav() {
                     Graphisme
                   </Link>
                 </li>
+                <li>
+                  <Link className="rounded-xl" href={"/pricing"}>
+                    Packs
+                  </Link>
+                </li>
               </ul>
             </details>
           </li>
           <li>
             <Link className="rounded-xl" href={"/devis"}>
               Devis
+            </Link>
+          </li>
+          <li>
+            <Link className="rounded-xl" href={"/lab"}>
+              Expérimentation
             </Link>
           </li>
           <ModeToggle />
