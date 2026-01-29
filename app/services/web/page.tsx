@@ -39,7 +39,9 @@ export default function WebServices() {
               itaque excepturi!
             </p>
             <div className="card-actions mt-4">
-              <Link href={"/devis?service=siteVitrine"}>Demander un devis</Link>
+              <button className="btn btn-primary rounded-xl hover:scale-105 transition duration-300">
+                <Link href={"/devis?service=siteVitrine"}>Demander un devis</Link>
+              </button>
             </div>
           </div>
         </div>
